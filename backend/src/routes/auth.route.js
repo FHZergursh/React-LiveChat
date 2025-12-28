@@ -1,5 +1,6 @@
 import express from "express"
-import { login, logout, signup } from "../controller/auth.controller.js";
+import { login, logout, signup, updateProfile } from "../controller/auth.controller.js";
+import { protectRoute } from "../middleware/auth.middleware.js";
 
 
 
@@ -11,6 +12,8 @@ router.post("/signup", signup)
 router.get("/login", login)
 
 router.get("/logout", logout)
+
+router.put("/update-profile", protectRoute, updateProfile)
 
 
 export default router
