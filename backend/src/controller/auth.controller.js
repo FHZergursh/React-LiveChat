@@ -96,3 +96,7 @@ export const login = async (req, res) => {
 export const logout = async (req, res) => {
   res.send("Login endpoint");
 }
+
+export const updateProfile = async (req, res) => {
+  
+}
